@@ -7,11 +7,5 @@ import { Post } from "./posts/post.model";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  posts: Post[] = [];
   title = "MeanStack";
-
-  onPostCreated(post: Post) {
-    this.posts.push(post);
-    console.log(this.posts);
-  }
 }

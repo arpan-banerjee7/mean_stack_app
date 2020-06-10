@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { Post } from "../post.model";
+import { PostService } from "../post.service";
 
 @Component({
   selector: "app-post-list",
@@ -11,8 +12,13 @@ export class PostListComponent implements OnInit {
   //   { title: "Fisrt", details: "this is the frist post" },
   //   { title: "Second", details: "this is the second post" },
   // ];
-  @Input() postList: Post[] = [];
-  constructor() {}
+  postList: Post[] = [];
+  constructor(private postService: PostService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.postList = this.postService.getPosts();
+    this.postService.getPostUpdateListener().subscribe((data) => {
+      this.postList = data;
+    });
+  }
 }
