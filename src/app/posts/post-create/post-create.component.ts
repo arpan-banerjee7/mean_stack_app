@@ -32,6 +32,7 @@ export class PostCreateComponent implements OnInit {
     console.log(this.postForm.value.content);
     if (this.postForm.invalid) return;
     const post: Post = {
+      id: null,
       title: this.postForm.value.title,
       content: this.postForm.value.content,
     };
