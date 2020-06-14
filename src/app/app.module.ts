@@ -8,6 +8,7 @@ import {
   MatToolbarModule,
   MatExpansionModule,
   MatFormFieldModule,
+  MatProgressSpinnerModule,
 } from "@angular/material";
 import { AppComponent } from "./app.component";
 import { PostsComponent } from "./posts/posts.component";
@@ -16,6 +17,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HeaderComponent } from "./header/header.component";
 import { PostListComponent } from "./posts/post-list/post-list.component";
 import { HttpClientModule } from "@angular/common/http";
+import { AppRoutingModule } from "./app.routing.module";
 
 @NgModule({
   declarations: [
@@ -30,12 +32,14 @@ import { HttpClientModule } from "@angular/common/http";
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    AppRoutingModule,
     MatInputModule,
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
     MatExpansionModule,
     MatFormFieldModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
