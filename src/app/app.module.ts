@@ -9,9 +9,10 @@ import {
   MatExpansionModule,
   MatFormFieldModule,
   MatProgressSpinnerModule,
+  MatPaginatorModule,
 } from "@angular/material";
 import { AppComponent } from "./app.component";
-import { PostsComponent } from "./posts/posts.component";
+
 import { PostCreateComponent } from "./posts/post-create/post-create.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HeaderComponent } from "./header/header.component";
@@ -22,7 +23,7 @@ import { AppRoutingModule } from "./app.routing.module";
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent,
+
     PostCreateComponent,
     HeaderComponent,
     PostListComponent,
@@ -41,6 +42,7 @@ import { AppRoutingModule } from "./app.routing.module";
     MatExpansionModule,
     MatFormFieldModule,
     MatProgressSpinnerModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
